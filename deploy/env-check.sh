@@ -32,7 +32,7 @@ echo -e "${BLUE}=== Starting Environment Audit ===${NC}"
 if [[ -f "$ENV_FILE" ]]; then
     echo -e "${YELLOW}[INFO]${NC} Found $ENV_FILE, loading variables..."
     # Export variables while ignoring comments
-    export $(grep -v '^#' "$ENV_FILE" | xargs)
+    export "$(grep -v '^#' "$ENV_FILE" | xargs)"
 fi
 
 MISSING=0

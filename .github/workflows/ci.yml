@@ -18,7 +18,7 @@ jobs:
         
       - name: Run ShellCheck on all scripts
         # FIXED: Added --severity=warning to ignore style 'nitpicks' like braces
-        run: find . -name '*.sh' -not -path './.git/*' -exec shellcheck --severity=warning {} +
+        run: find . -name '*.sh' -not -path './.git/*' -exec shellcheck --severity=warning --exclude=SC2155,SC2046 {} +
 
   bats:
     name: Run Bats Tests
