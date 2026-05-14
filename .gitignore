@@ -1,0 +1,10 @@
+# Logs
+*.log
+logs/archive/
+# Backups
+docker-backups/
+# OS files
+.DS_Store
+Thumbs.db
+# Bats helpers (installed by CI, not committed)
+tests/helpers/
