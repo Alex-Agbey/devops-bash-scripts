@@ -59,3 +59,19 @@ Ensure the script is executable:
 ```bash
 chmod +x ./system/health-check.sh
 ./system/health-check.sh
+
+
+## Quick Start
+```bash
+git clone https://github.com/Alex-Agbey/devops-bash-scripts
+cd devops-bash-scripts
+find . -name '*.sh' -exec chmod +x {} +
+./system/health-check.sh
+```
+## Running Tests
+```bash
+# Install Bats
+git clone https://github.com/bats-core/bats-core.git /tmp/bats
+sudo /tmp/bats/install.sh /usr/local
+# Run all tests
+bats tests/
